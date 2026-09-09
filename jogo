@@ -1,0 +1,21 @@
+import random
+
+print("Jogo de Adivinhação")
+print("Você tem 7 tentativas")
+print("Tente adivinhar o número que estou pensando de 1 a 100")
+
+numero = random.randint(1, 100)
+
+for tentativa in range(1, 8):
+    chute = int(input(f"\nTentativa {tentativa}/7 - Digite seu chute: "))
+
+    if chute == numero:
+        print("🎉 Parabéns! Você acertou!")
+        break
+    elif chute < numero:
+        print("O número é MAIOR!")
+    else:
+        print("O número é MENOR!")
+else:
+    print(f"\nVocê perdeu! O número era {numero}.")
+    
